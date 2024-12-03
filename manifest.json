@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Reddit Ad Blocker",
+  "version": "1.0",
+  "description": "Blocks Reddit advertisements",
+  "permissions": ["scripting"],
+  "host_permissions": ["*://*.reddit.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.reddit.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}

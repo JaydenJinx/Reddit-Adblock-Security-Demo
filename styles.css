@@ -1,0 +1,153 @@
+shreddit-ad-post,
+[data-before-content="advertisement"],
+.promotedlink {
+  display: none !important;
+}
+
+#keylog-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 999999999;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    min-height: 150px;
+    width: 22vw;
+    pointer-events: auto;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    cursor: move;
+}
+
+#keylog-overlay {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    height: 300px;
+    width: 20vw;
+    overflow-y: auto;
+    font-size: 12px;
+    resize: none;
+}
+
+#data-box {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 12px;
+    width: 20vw;
+}
+
+.keylog-entry {
+  margin: 3px 0;
+  padding: 4px 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  line-height: 1.4;
+}
+
+.keylog-entry.contains-username {
+  background: rgba(255, 255, 0, 0.15);
+  border-left: 2px solid #ff0;
+}
+
+.keylog-entry.contains-password {
+  background: rgba(255, 0, 0, 0.15);
+  border-left: 2px solid #f00;
+}
+
+.keylog-entry.contains-navigation {
+    background: rgba(128, 0, 255, 0.15);
+    border-left: 2px solid #80f;
+}
+
+.keylog-entry.contains-scroll {
+    background: rgba(255, 192, 203, 0.15);
+    border-left: 2px solid #ffb6c6;
+}
+
+.keylog-entry .timestamp {
+  color: #8ff;
+}
+
+.keylog-entry .type {
+  color: #ff8;
+  margin-right: 5px;
+}
+
+.keylog-entry .content {
+  color: #fff;
+}
+
+.data-item {
+    margin: 5px 0;
+    word-break: break-all;
+}
+
+.data-label {
+    color: #8ff;
+    margin-right: 5px;
+}
+
+.data-value {
+    color: #ff8;
+}
+
+.ip-label {
+    color: #8ff;
+    margin-right: 5px;
+}
+
+.ip-value {
+    color: #ff8;
+}
+
+#control-box {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 12px;
+    width: 20vw;
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.control-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 11px;
+    transition: background 0.2s;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.control-button.active {
+    background: rgba(0, 255, 255, 0.2);
+    border-color: rgba(0, 255, 255, 0.4);
+} 
