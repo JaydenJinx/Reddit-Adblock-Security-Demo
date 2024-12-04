@@ -5,6 +5,9 @@
   "description": "Blocks Reddit advertisements",
   "permissions": ["scripting"],
   "host_permissions": ["*://*.reddit.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  }, 
   "content_scripts": [
     {
       "matches": ["*://*.reddit.com/*"],
