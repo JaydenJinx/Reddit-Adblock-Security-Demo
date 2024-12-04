@@ -28,7 +28,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
                 sendResponse({ status: "error", error: error.message });
             });
 
-        // Required to handle async responses properly
         return true;
     }
 });
