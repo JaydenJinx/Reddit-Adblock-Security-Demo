@@ -1,9 +1,16 @@
 const express = require('express');
- 
-const bodyParser = require('body-parser');
+const bodyParser = require("body-parser");
+const cors = require("cors"); // Import the CORS middleware
 
 const app = express(); // Create express application
 const PORT = 3000; // Set port number
+
+// Enables CORS for our extension. This essentially allows us to recieve data from our extension to our server
+// Chrome by default blocks this
+app.use(cors({
+    origin: 'chrome-extension://agknonoomgeliflckdiohplhmlndmffb'
+}
+));
 
 app.use(bodyParser.json());    // parse incoming json requests
 
